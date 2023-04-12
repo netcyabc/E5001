@@ -1,4 +1,6 @@
 name: TestReader
+on:
+  workflow_dispatch:
 
 env:
   CUSTOMER: CUSTOMER1
