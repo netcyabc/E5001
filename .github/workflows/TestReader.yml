@@ -1,0 +1,21 @@
+name: TestReader
+
+env:
+  CUSTOMER: CUSTOMER1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      MS_TOKEN_1: ${{ secrets.MS_TOKEN }} 
+      CLIENT_ID_1: ${{ secrets.CLIENT_ID }}
+      CLIENT_SECRET_1: ${{ secrets.CLIENT_SECRET }}
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        MS_TOKEN_1=${{ secrets[env.MS_TOKEN_1] }}
+        echo "MS_TOKEN_1 = $MS_TOKEN_1"
+        CLIENT_ID_1=${{ secrets[env.CLIENT_ID_1] }}
+        echo "CLIENT_ID_1 = $CLIENT_ID_1"
+        CLIENT_SECRET_1=${{ secrets[env.CLIENT_SECRET_1] }}
+        echo "CLIENT_SECRET_1 = $CLIENT_SECRET_1"
