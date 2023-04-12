@@ -19,11 +19,11 @@ jobs:
         
         echo "MS_TOKEN_1 = $MS_TOKEN_1"
         
-        CLIENT_ID_1=${{ secrets[CLIENT_ID] }}
+        CLIENT_ID_1=env.CLIENT_ID
         
         echo "CLIENT_ID_1 = $CLIENT_ID_1"
         
-        CLIENT_SECRET_1=${{ secrets[CLIENT_SECRET] }}
+        CLIENT_SECRET_1=${{ CLIENT_SECRET }}
         
         echo "CLIENT_SECRET_1 = $CLIENT_SECRET_1"
         
