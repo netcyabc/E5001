@@ -9,15 +9,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      MS_TOKEN_1: ${{ secrets.MS_TOKEN }} 
-      CLIENT_ID_1: ${{ secrets.CLIENT_ID }}
-      CLIENT_SECRET_1: ${{ secrets.CLIENT_SECRET }}
+      MS_TOKEN: ${{ secrets.MS_TOKEN }} 
+      CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
     steps:
     - uses: actions/checkout@v2
     - run: |
-        MS_TOKEN_1=${{ secrets[env.MS_TOKEN_1] }}
+        MS_TOKEN_1=${{ secrets[MS_TOKEN] }}
+        
         echo "MS_TOKEN_1 = $MS_TOKEN_1"
-        CLIENT_ID_1=${{ secrets[env.CLIENT_ID_1] }}
+        
+        CLIENT_ID_1=${{ secrets[CLIENT_ID] }}
+        
         echo "CLIENT_ID_1 = $CLIENT_ID_1"
-        CLIENT_SECRET_1=${{ secrets[env.CLIENT_SECRET_1] }}
+        
+        CLIENT_SECRET_1=${{ secrets[CLIENT_SECRET] }}
+        
         echo "CLIENT_SECRET_1 = $CLIENT_SECRET_1"
+        
