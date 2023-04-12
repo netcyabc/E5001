@@ -15,10 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        #MS_TOKEN_1=${{ secrets[MS_TOKEN] }}
-        
-        #echo "MS_TOKEN_1 = $MS_TOKEN_1"
-        
         CLIENT_ID_1=env.CLIENT_ID
         
         echo "CLIENT_ID_1 = $CLIENT_ID_1"
